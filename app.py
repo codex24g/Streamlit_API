@@ -9,9 +9,6 @@ def main():
     if page == "Image Classification":
         import image_classification  # Import the image classification module
         image_classification.run()
-    elif page == "Real-Time Staff Classification":
-        import real_time_classification  # Import the real-time classification module
-        real_time_classification.run()
     elif page == "Edit Staff Info":
         import edit_staff_info  # Import the edit staff info module
         edit_staff_info.run()
