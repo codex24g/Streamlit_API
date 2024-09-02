@@ -181,3 +181,6 @@ def run():
         st.write(f"Prediction: {predicted_class_name} with probability {np.max(predictions):.2f}")
         st.write(f"Drink Preference: {json.load(open('class_names.json')).get(predicted_class_name, {}).get('drink_preference', 'N/A')}")
         st.write(f"Dietary Restrictions: {json.load(open('class_names.json')).get(predicted_class_name, {}).get('dietary_restrictions', 'N/A')}")
+        # Provide the model as a downloadable file
+        with open('staff_mobilenet_v2_model.h5', 'rb') as f:
+            st.download_button(label="Download Model", data=f, file_name='staff_mobilenet_v2_model.h5')
